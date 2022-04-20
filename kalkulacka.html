@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <input name="cislo1" id="cislo1" type="number">
+    <select name="znamenko" id="znamenko">
+        <option value="+"> + </option>
+        <option value="-"> - </option>
+    </select>
+    <input name="cislo2"id="cislo2" type="number"> 
+    <button onclick="vypocet()" >Vypocitej součet</button>
+
+    <div class="vysledek"></div>
+    <script src="kalkulacka.js"></script>
 </body>
 </html>
