@@ -12,11 +12,11 @@ console.log(rodneCislo.length)
 function overRC(){
     //Kontrola mesice
 if (!(mesic>=1 && mesic<=12 || mesic>=51&&mesic<=62)) {
-    document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";
+    document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo. Zřejmě jsi zadal/a špatně měsíc narození";
     } 
     //kontrola dnu
     else if(!(den>=1 && den<=31))
-    {document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";    
+    {document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo. asi jsi zadal/a špatně den narození.";    
     }
     //kontrola roku narozeni
     else if (rok < 54 && rodneCislo.length<=9){
