@@ -7,13 +7,20 @@ function vypocet(){
     cislo1=parseInt(cislo1);
     cislo2=parseInt(cislo2);
     
-    znamenko = document.querySelector("select.option").value;
+    znamenko = document.querySelector("select").value;
     
     if (znamenko === "+"){
-    vysledek=cislo1+cislo2;
-    document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
-    } else {
+        vysledek=cislo1+cislo2;
+        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        } else if (znamenko === "-"){
         vysledek=cislo1-cislo2;
         document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        } else if (znamenko === "*"){
+        vysledek=cislo1*cislo2;
+        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        } else {
+        vysledek=cislo1/cislo2;
+        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
     }
+
 }
