@@ -1,27 +1,34 @@
 
 let rodneCislo= document.querySelector("input[name=rodneCislo]").value;
-let rok=rodneCislo.substr(0,2);
-let mesic=rodneCislo.substr(2,2);
-let den=rodneCislo.substr(4,2);
+let rok=parseInt(rodneCislo.substr(0,2));
+let mesic=parseInt(rodneCislo.substr(2,2));
+let den=parseInt(rodneCislo.substr(4,2));
 
 console.log(rok);
 console.log(mesic);
 console.log(den);
-
+console.log(rodneCislo.length)
 
 function overRC(){
-let rodneCislo= document.querySelector("input[name=rodneCislo]").value;
+    //Kontrola mesice
+if (!(mesic>=1 && mesic<=12 || mesic>=51&&mesic<=62)) {
+    document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";
+    } 
+    //kontrola dnu
+    else if(!(den>=1 && den<=31))
+    {document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";    
+    }
+    //kontrola roku narozeni
+    else if (rok < 54 && rodneCislo.length<=9){
+        document.querySelector('.vysledek').innerHTML="Může se jednat o rodné číslo člověka narozeného před rokum 1954";
+    }
+    else if (rodneCislo % 11 !== 0) {
+        document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";
+    }else {
+        document.querySelector('.vysledek').innerHTML="Bylo vloženo rodné číslo.";
+        }
+}
 
-if 
-
-
-// (rodneCislo % 11 !== 0) {
-//         document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";
-//     } else if ( {
-//     } else {
-//         document.querySelector('.vysledek').innerHTML="Bylo vloženo rodné číslo.";
-//     }
-// }
 
 // první dvojčíslí vyjadřuje poslední dvě číslice roku narození,
 //  druhé dvojčíslí vyjadřuje měsíc narození,
@@ -37,4 +44,4 @@ if
 
 // done
 // - Rodné číslo je desetimístné číslo, které je dělitelné jedenácti
-// beze zbytku;
+// beze zbytku
