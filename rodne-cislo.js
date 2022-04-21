@@ -22,6 +22,8 @@ if (!(mesic>=1 && mesic<=12 || mesic>=51&&mesic<=62)) {
     else if (rok < 54 && rodneCislo.length<=9){
         document.querySelector('.vysledek').innerHTML="Může se jednat o rodné číslo člověka narozeného před rokum 1954";
     }
+
+    //kontrola delitelnosti
     else if (rodneCislo % 11 !== 0) {
         document.querySelector('.vysledek').innerHTML="Nebylo vloženo rodné číslo.";
     }else {
