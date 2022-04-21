@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style-kalkulacka.css">
+
     <title>Document</title>
 </head>
 <body>
-    <input name="cislo1" id="cislo1" type="number">
-    <select name="znamenko" id="znamenko">
-        <option value="+"> + </option>
-        <option value="-"> - </option>
-        <option value="*"> * </option>
-        <option value="/"> / </option>
-    </select>
-    <input name="cislo2"id="cislo2" type="number"> 
-    <button onclick="vypocet()" >Vypocitej součet</button>
+    <div class="kalkulacka">
+        <input name="cislo1" id="cislo1" type="number">
+        <select name="znamenko" id="znamenko">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> / </option>
+        </select>
+        <input name="cislo2"id="cislo2" type="number"> 
+        <button onclick="vypocet()" >Vypočítej</button>
 
-    <div class="vysledek"></div>
+        <div class="vysledek"></div>
+    </div>
     <script src="kalkulacka.js"></script>
+   
 </body>
 </html>

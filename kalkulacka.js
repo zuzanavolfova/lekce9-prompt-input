@@ -11,16 +11,16 @@ function vypocet(){
     
     if (znamenko === "+"){
         vysledek=cislo1+cislo2;
-        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        document.querySelector('.vysledek').innerHTML='Výsledek je: ' + vysledek;
         } else if (znamenko === "-"){
         vysledek=cislo1-cislo2;
-        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        document.querySelector('.vysledek').innerHTML='Výsledek je: ' + vysledek;
         } else if (znamenko === "*"){
         vysledek=cislo1*cislo2;
-        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        document.querySelector('.vysledek').innerHTML='Výsledek je: ' + vysledek;
         } else {
         vysledek=cislo1/cislo2;
-        document.querySelector('.vysledek').innerHTML='Vysledek je: ' + vysledek;
+        document.querySelector('.vysledek').innerHTML='Výsledek je: ' + vysledek;
     }
 
 }
